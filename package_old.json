@@ -1,0 +1,56 @@
+{
+  "_from": "git+https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+  "_id": "dff-cordova-plugin-emdk-powermanager@1.0.3",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/dff-cordova-plugin-emdk-powermanager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+    "rawSpec": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+    "saveSpec": "git+https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+    "fetchSpec": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git#0772a9d3d2d6d88f77a7c2ee742e785ca39e4ee2",
+  "_spec": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+  "_where": "C:\\Users\\a90886\\Documents\\Cordova Apps\\DemoEMDKProfile",
+  "author": {
+    "name": "dff solutions"
+  },
+  "bugs": {
+    "url": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Codova Plugin for PowerManager",
+  "directories": {
+    "doc": "doc"
+  },
+  "homepage": "https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git",
+  "keywords": [
+    "Cordova",
+    "PhoneGap",
+    "PowerManager",
+    "Plugin",
+    "Android",
+    "dff",
+    "dff-solutions"
+  ],
+  "license": "ISC",
+  "main": "\"\"",
+  "name": "dff-cordova-plugin-emdk-powermanager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.3"
+}

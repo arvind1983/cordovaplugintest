@@ -2,8 +2,6 @@ package com.dff.cordova.plugin.emdk.powermanager;
 
 import android.content.Context;
 import android.util.Xml;
-import android.widget.Toast;
-
 import com.dff.cordova.plugin.common.CommonPlugin;
 import com.dff.cordova.plugin.common.log.CordovaPluginLog;
 import com.symbol.emdk.EMDKManager;
@@ -271,40 +269,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             // name
             EMDKResults results = profileManager.processProfile(profileName,
                     ProfileManager.PROFILE_FLAG.SET, modifyData);
-            Toast.makeText(webView.getContext(),"applying",Toast.LENGTH_SHORT).show();
-            JSONObject jsonResult = EMDKResultToJson(results);
 
-            CordovaPluginLog.i(LOG_TAG, "EMDKResult: " + EMDKResultToJson(results));
-
-            if (results.statusCode == EMDKResults.STATUS_CODE.CHECK_XML) {
-                // Method call to handle EMDKResult
-                handleEMDKResult(results);
-            } else {
-                CordovaPluginLog.e(LOG_TAG, "Failed to apply profile... "
-                        + profileName);
-            }
-
-            callbackContext.success(jsonResult);
-        } else {
-            String msg = "profile manager not instantiated";
-            CordovaPluginLog.e(LOG_TAG, msg);
-            callbackContext.error(msg);
-        }
-    }
-
-    private void ApplyProfile_XMLString(String profName,CallbackContext callbackContext) throws JSONException {
-        if (profileManager != null) {
-            // Prepare XML to modify the existing profile
-            String[] modifyData = new String[1];
-            // Modified XML input for Sleep and Reboot feature based on user
-            // selected options of radio button
-            // value = 1 -> Sleep Mode
-            // value = 4 -> Reboot
-
-            // Call process profile to modify the profile of specified profile
-            // name
-            EMDKResults results = profileManager.processProfile(profName,
-                    ProfileManager.PROFILE_FLAG.SET, modifyData);
             JSONObject jsonResult = EMDKResultToJson(results);
 
             CordovaPluginLog.i(LOG_TAG, "EMDKResult: " + EMDKResultToJson(results));
@@ -352,18 +317,6 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             value = OPTION_REBOOT; // 4 - Perform Reset/Reboot (Reboot Device)
             // Apply Settings selected by user
             modifyProfile_XMLString(callbackContext);
-
-            return true;
-        }
-        if (action.equals("wifi_on")) {
-
-            ApplyProfile_XMLString("wifi_on",callbackContext);
-
-            return true;
-        }
-        if (action.equals("wifioff")) {
-
-            ApplyProfile_XMLString("wifioff",callbackContext);
 
             return true;
         }

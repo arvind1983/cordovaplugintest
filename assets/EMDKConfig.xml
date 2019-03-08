@@ -8,8 +8,34 @@
         <parm name="ModifiedDate" value="2016-01-08 13:22:34"/>
         <parm name="TargetSystemVersion" value="4.4"/>
         <characteristic type="PowerMgr" version="4.2">
-           <parm name="emdk_name" value="DffProfileManager"/>
-           <parm name="ResetAction" value="0" />
+            <parm name="emdk_name" value="DffProfileManager"/>
+            <parm name="ResetAction" value="0" />
+        </characteristic>
+    </characteristic>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="wifioff"/>
+        <parm name="ModifiedDate" value="2018-12-14 17:24:55"/>
+        <parm name="TargetSystemVersion" value="4.2"/>
+        <characteristic type="Wi-Fi" version="2.7">
+            <parm name="emdk_name" value=""/>
+            <characteristic type="System">
+                <parm name="WiFiAction" value="disable"/>
+            </characteristic>
+            <parm name="UseRegulatory" value="0"/>
+            <parm name="UseAdvancedOptions" value="0"/>
+        </characteristic>
+    </characteristic>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="wifi_on"/>
+        <parm name="ModifiedDate" value="2018-12-14 17:24:55"/>
+        <parm name="TargetSystemVersion" value="4.2"/>
+        <characteristic type="Wi-Fi" version="2.7">
+            <parm name="emdk_name" value=""/>
+            <characteristic type="System">
+                <parm name="WiFiAction" value="enable"/>
+            </characteristic>
+            <parm name="UseRegulatory" value="0"/>
+            <parm name="UseAdvancedOptions" value="0"/>
         </characteristic>
     </characteristic>
 </wap-provisioningdoc>

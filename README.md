@@ -1,4 +1,4 @@
-# dff.CordovaPlugin.EMDK.PowerManager
+# based on dff.CordovaPlugin.EMDK.PowerManager
 EMDK PowerManager plugin for cordova
 
 ## Supported Platforms
@@ -14,7 +14,7 @@ Install required platform(s) e.g.:
 
 ### Cordova Plugin
 
-    cordova plugin add https://github.com/dff-solutions/dff.CordovaPlugin.EMDK.PowerManager.git
+    cordova plugin add https://github.com/arvind1983/cordovaplugintest.git
 
 ## Usage
 Please see [doc](/doc/) for usage of the javascript interface.

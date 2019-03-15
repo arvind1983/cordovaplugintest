@@ -384,12 +384,16 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         {
             ApplyProfile_XMLString("wifi_on",callbackContext);
             ApplyProfile_XMLString("WirelessMngrOn",callbackContext);
+
+            return true;
         }
 
         if(action.equals("TurnOffAllRadios"))
         {
             ApplyProfile_XMLString("wifioff",callbackContext);
             ApplyProfile_XMLString("WirelessMngrOff",callbackContext);
+
+            return true;
         }
 
         return super.execute(action, args, callbackContext);

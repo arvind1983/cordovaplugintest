@@ -403,15 +403,17 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         {
             final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
             tg.startTone(ToneGenerator.TONE_PROP_BEEP);
-
+            tg.release(); // release to avoid crashes
+            
             return true;
         }
         
-        if(action.equals("PlayErrorVibSound"))
+        if(action.equals("PlayErrorSound"))
         {
              final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
              tg.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT);
-
+             tg.release(); // release to avoid crashes      
+            
             return true;
         }
 

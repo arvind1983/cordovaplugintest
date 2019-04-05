@@ -17,13 +17,6 @@ import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.os.Bundle;
-import android.os.Build;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.media.AudioManager;
-import android.media.ToneGenerator;
-
 import java.io.StringReader;
 
 /**
@@ -399,41 +392,6 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         {
             ApplyProfile_XMLString("wifi",callbackContext);
             ApplyProfile_XMLString("WirelessMngrOff",callbackContext);
-
-            return true;
-        }
-        
-        if(action.equals("PlayBeepSound"))
-        {
-            final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
-            tg.startTone(ToneGenerator.TONE_PROP_BEEP);
-
-            return true;
-        }
-        
-        if(action.equals("PlayErrorVibSound"))
-        {
-             final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
-             tg.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT);
-            
-            // Do Vibrate
-
-            Vibrator v = (Vibrator) getSystemService(webview.getContext().VIBRATOR_SERVICE);
-            if (v.hasVibrator())
-            {
-                // Vibrate for 500 milliseconds
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-                } else {
-                    //deprecated in API 26
-                    v.vibrate(500);
-
-                }
-            }
-            else
-            {
-                // no vibrator found
-            }
 
             return true;
         }

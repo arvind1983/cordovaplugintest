@@ -19,10 +19,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.media.AudioManager;
 import android.media.ToneGenerator;
-import android.os.Build;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.os.Bundle;
 
 import java.io.StringReader;
 
@@ -415,25 +411,6 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         {
              final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
              tg.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT);
-            
-            // Do Vibrate
-
-            Vibrator v = (Vibrator) getSystemService(webview.getContext().VIBRATOR_SERVICE);
-            if (v.hasVibrator())
-            {
-                // Vibrate for 500 milliseconds
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-                } else {
-                    //deprecated in API 26
-                    v.vibrate(500);
-
-                }
-            }
-            else
-            {
-                // no vibrator found
-            }
 
             return true;
         }

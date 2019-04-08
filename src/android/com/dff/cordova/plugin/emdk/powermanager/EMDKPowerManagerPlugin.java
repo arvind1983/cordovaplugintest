@@ -20,6 +20,10 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
+
 import java.io.StringReader;
 
 /**
@@ -410,9 +414,10 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         
         if(action.equals("PlayErrorSound"))
         {
-             final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
-             tg.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT);
-             tg.release(); // release to avoid crashes      
+            // Use system notification sound
+            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Ringtone r = RingtoneManager.getRingtone(webView.getContext(), notification);
+            r.play();     
             
             return true;
         }

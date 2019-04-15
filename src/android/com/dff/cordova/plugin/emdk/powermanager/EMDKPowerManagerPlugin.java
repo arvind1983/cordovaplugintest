@@ -24,6 +24,10 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 
+import android.telephony.TelephonyManager;
+import android.net.Network;
+import android.net.NetworkInfo;
+
 import java.io.StringReader;
 
 /**
@@ -420,6 +424,12 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             r.play();     
             
             return true;
+        }
+        
+        if(action.equals("IsCellConnectionEnabled"))
+        {
+            TelephonyManager tel = (TelephonyManager) webView.getContext().getSystemService(Context.TELEPHONY_SERVICE);
+            return ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);
         }
 
         return super.execute(action, args, callbackContext);

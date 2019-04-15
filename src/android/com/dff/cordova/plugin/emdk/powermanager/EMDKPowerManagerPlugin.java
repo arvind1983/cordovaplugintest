@@ -429,7 +429,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         if(action.equals("IsCellConnectionEnabled"))
         {
             TelephonyManager tel = (TelephonyManager) webView.getContext().getSystemService(Context.TELEPHONY_SERVICE); 
-            boolean telstatus = ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);
+            Boolean telstatus = ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);
             Toast.makeText(webView.getContext(),"Cell connection " + status,Toast.LENGTH_SHORT).show();
             return telstatus;
             //return ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);

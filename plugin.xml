@@ -29,15 +29,12 @@
 
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="com.symbol.emdk.permission.EMDK"/>
+	    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <uses-library android:name="com.symbol.emdk"/>
         </config-file>
-	    
-	<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-        </config-file>    
 
         <framework src="emdkpowermanager.gradle" custom="true" type="gradleReference" />
         <resource-file src="assets/EMDKConfig.xml" target="assets/EMDKConfig.xml" />

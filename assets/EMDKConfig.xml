@@ -82,4 +82,20 @@
       <parm name="WWANState" value="2"/>
     </characteristic>
   </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="CellularMngrOn"/>
+    <parm name="ModifiedDate" value="2019-03-13 11:15:33"/>
+    <parm name="TargetSystemVersion" value="4.4"/>
+    <characteristic type="WirelessMgr" version="4.3">
+      <parm name="WWANState" value="1"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="CellularMngrOff"/>
+    <parm name="ModifiedDate" value="2019-03-13 11:15:33"/>
+    <parm name="TargetSystemVersion" value="4.4"/>
+    <characteristic type="WirelessMgr" version="4.3">
+      <parm name="WWANState" value="2"/>
+    </characteristic>
+  </characteristic>
 </wap-provisioningdoc>

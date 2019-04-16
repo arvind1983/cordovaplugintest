@@ -435,12 +435,14 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             //return ((tel.getNetworkOperator() != null && tel.getNetworkOperator().equals("")) ? false : true);
             if(telstatus)
             {
-                ApplyProfile_XMLString("WirelessMngrOff",callbackContext);
+                ApplyProfile_XMLString("CellularMngrOff",callbackContext);
             }
             else
             {
-                ApplyProfile_XMLString("WirelessMngrOff",callbackContext);   
+                ApplyProfile_XMLString("CellularMngrOn",callbackContext);   
             }
+            
+            return true;
         }
 
         return super.execute(action, args, callbackContext);

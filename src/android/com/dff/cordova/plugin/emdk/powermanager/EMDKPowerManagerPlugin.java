@@ -426,6 +426,20 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             return true;
         }
         
+        if(action.equals("TurnOffCell"))
+        {
+             ApplyProfile_XMLString("CellMngrOff",callbackContext);
+
+            return true;
+        }
+        
+        if(action.equals("TurnOnCell"))
+        {
+             ApplyProfile_XMLString("CellMngrOn",callbackContext);
+
+            return true;
+        }
+        
         if(action.equals("IsCellConnectionEnabled"))
         {
             TelephonyManager tel = (TelephonyManager) webView.getContext().getSystemService(Context.TELEPHONY_SERVICE); 

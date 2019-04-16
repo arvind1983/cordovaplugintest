@@ -87,6 +87,7 @@
     <parm name="ModifiedDate" value="2019-03-13 11:15:33"/>
     <parm name="TargetSystemVersion" value="4.4"/>
     <characteristic type="WirelessMgr" version="4.3">
+       <parm name="emdk_name" value="CellularMngrOn"/>
       <parm name="WWANState" value="1"/>
     </characteristic>
   </characteristic>
@@ -95,6 +96,7 @@
     <parm name="ModifiedDate" value="2019-03-13 11:15:33"/>
     <parm name="TargetSystemVersion" value="4.4"/>
     <characteristic type="WirelessMgr" version="4.3">
+      <parm name="emdk_name" value="CellularMngrOff"/>
       <parm name="WWANState" value="2"/>
     </characteristic>
   </characteristic>

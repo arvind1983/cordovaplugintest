@@ -436,10 +436,12 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             if(telstatus)
             {
                 ApplyProfile_XMLString("CellularMngrOff",callbackContext);
+                 Toast.makeText(webView.getContext(),"Turning off Cellular").show();
             }
             else
             {
-                ApplyProfile_XMLString("CellularMngrOn",callbackContext);   
+                ApplyProfile_XMLString("CellularMngrOn",callbackContext);
+                Toast.makeText(webView.getContext(),"Turning on Cellular").show();
             }
             
             return true;

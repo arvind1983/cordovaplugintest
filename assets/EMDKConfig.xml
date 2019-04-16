@@ -57,6 +57,32 @@
     </characteristic>
   </characteristic>
   <characteristic type="Profile">
+    <parm name="ProfileName" value="WirelessMngrOn"/>
+    <parm name="ModifiedDate" value="2019-03-13 11:15:00"/>
+    <parm name="TargetSystemVersion" value="4.4"/>
+    <characteristic type="WirelessMgr" version="4.3">
+      <parm name="emdk_name" value="WirelessMngr_on"/>
+      <parm name="Bluetooth" value="1"/>
+      <parm name="BluetoothState" value="1"/>
+      <parm name="NFCState" value="0"/>
+      <parm name="GPSState" value="1"/>
+      <parm name="WWANState" value="1"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="WirelessMngrOff"/>
+    <parm name="ModifiedDate" value="2019-03-13 11:15:33"/>
+    <parm name="TargetSystemVersion" value="4.4"/>
+    <characteristic type="WirelessMgr" version="4.3">
+      <parm name="emdk_name" value="WirelessOff"/>
+      <parm name="Bluetooth" value="2"/>
+      <parm name="BluetoothState" value="2"/>
+      <parm name="NFCState" value="2"/>
+      <parm name="GPSState" value="2"/>
+      <parm name="WWANState" value="2"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
     <parm name="ProfileName" value="CellMngrOn"/>
     <parm name="ModifiedDate" value="2019-03-13 11:15:00"/>
     <parm name="TargetSystemVersion" value="4.4"/>

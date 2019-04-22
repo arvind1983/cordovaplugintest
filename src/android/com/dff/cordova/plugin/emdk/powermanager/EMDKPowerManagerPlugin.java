@@ -25,6 +25,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 
 import android.telephony.TelephonyManager;
+import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
 
@@ -454,6 +455,41 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
                 callbackContext.success("false");
             }
             
+            return true;
+            
+        }
+        
+        if(action.equals("CheckConnecType"))
+        {
+            ConnectivityManager connMgr =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+            boolean isWifiConn = false;
+            boolean isMobileConn = false;
+            boolean isEthernet = false;
+            String networkType = "";
+            for (Network network : connMgr.getAllNetworks()) {
+                NetworkInfo networkInfo = connMgr.getNetworkInfo(network);
+                if (networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+                    isWifiConn |= networkInfo.isConnected();
+                    networkType = "Wi-Fi";
+                }
+                if (networkInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+                    isMobileConn |= networkInfo.isConnected();
+                    networkType = "Cellular";
+                }
+                if (networkInfo.getType() == ConnectivityManager.TYPE_ETHERNET) {
+                    isEthernet |= networkInfo.isConnected();
+                    networkType = "Ethernet";
+                }
+            }
+            if(networkType.isEmpty() != true)
+            {
+                 callbackContext.success(networkType);
+            }
+            else
+            {
+                 callbackContext.success("None");
+            }
             return true;
             
         }

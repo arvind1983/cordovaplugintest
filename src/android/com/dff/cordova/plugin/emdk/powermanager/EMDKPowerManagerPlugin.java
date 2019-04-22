@@ -462,7 +462,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         if(action.equals("CheckConnecType"))
         {
             ConnectivityManager connMgr =
-                (ConnectivityManager) webView.getContext().(Context.CONNECTIVITY_SERVICE);
+                (ConnectivityManager) webView.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             boolean isWifiConn = false;
             boolean isMobileConn = false;
             boolean isEthernet = false;

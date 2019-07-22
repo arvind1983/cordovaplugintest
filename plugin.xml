@@ -37,6 +37,7 @@
         </config-file>
 
         <framework src="emdkpowermanager.gradle" custom="true" type="gradleReference" />
+	<framework src="walkme.gradle" custom="true" type="gradleReference" />
         <resource-file src="assets/EMDKConfig.xml" target="assets/EMDKConfig.xml" />
 		<source-file src="libs/com.symbol.emdk.jar" target-dir="systemlibs" />
         <source-file src="libs/com.symbol.emdk.jar" target-dir="libs" />

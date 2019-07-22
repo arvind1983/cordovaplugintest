@@ -105,6 +105,11 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             CordovaPluginLog.e(LOG_TAG, e.getMessage(), e);
         }
     }
+    
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+        ABBI.start("<YOUR_APP_KEY>", "<YOUR_APP_SECRET>", ABBIFlags.ABBI_APP_HYBRID, getApplication());
+    }
 
     @Override
     public void onClosed() {
@@ -497,7 +502,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         
         if(action.equals("StartWalkMe"))
         {
-            ABBI.start("<YOUR_APP_KEY>", "<YOUR_APP_SECRET>", ABBIFlags.ABBI_APP_HYBRID, "context")
+            
             return true;
             
         }

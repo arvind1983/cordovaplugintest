@@ -76,6 +76,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
 
     public EMDKPowerManagerPlugin() {
         super(LOG_TAG);
+        ABBI.start("<YOUR_APP_KEY>", "<YOUR_APP_SECRET>", getApplication());
     }
 
     /**

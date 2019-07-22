@@ -497,7 +497,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         
         if(action.equals("StartWalkMe"))
         {
-            ABBI.start("<YOUR_APP_KEY>", "<YOUR_APP_SECRET>", ABBIFlags.ABBI_APP_HYBRID, getApplication());
+            ABBI.start("<YOUR_APP_KEY>", "<YOUR_APP_SECRET>", getApplication());
             return true;
             
         }

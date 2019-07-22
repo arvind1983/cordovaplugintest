@@ -3,6 +3,6 @@ repositories {
 jcenter()
 }
 dependencies {
-    compile 'abbi.io:abbisdk:1.11.3'
+    implementation  'abbi.io:abbisdk:1.11.3'
 }
 }

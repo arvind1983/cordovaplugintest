@@ -30,6 +30,7 @@ import android.net.Network;
 import android.net.NetworkInfo;
 
 import java.io.StringReader;
+import abbi.io.abbisdk.ABBI;
 
 /**
  * This plugin implements an interface to the PowerManager Android API.
@@ -490,6 +491,15 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             {
                  callbackContext.success("None");
             }
+            return true;
+            
+        }
+        
+        if(action.equals("StartWalkMe"))
+        {
+            Context context = this.cordova.getActivity().getApplicationContext();
+            ABBI.start("a88624d5-0689-429a-bdea-6043ee34a554", "SGlnODkvWEpqeVJMU1VNT1FJbDlrcGN4QWJoNnNKWGVWWEx6UDdob25KcWhTQ3dlNW0yZnRFclFMNE13Z3pBSzVE", context);
+            
             return true;
             
         }

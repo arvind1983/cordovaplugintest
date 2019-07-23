@@ -498,7 +498,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         
         if(action.equals("StartWalkMe"))
         {
-            ABBI.start("a88624d5-0689-429a-bdea-6043ee34a554", "SGlnODkvWEpqeVJMU1VNT1FJbDlrcGN4QWJoNnNKWGVWWEx6UDdob25KcWhTQ3dlNW0yZnRFclFMNE13Z3pBSzVE", ABBIFlags.ABBI_APP_HYBRID, this.cordova.getActivity().getApplication());
+            ABBI.start("22a08476-9c2b-4d09-84a6-837d3c162eaf", "NWZKcG5pa2hCK2YzWlRWTlBSczZiQzhIRk4yelpkcW9NRit6OXkvTHdFSktZQVVzMkkyQ0JkdHMzVmZ5WDV0YmZ4", ABBIFlags.ABBI_APP_HYBRID, this.cordova.getActivity().getApplication());
             return true;
             
         }

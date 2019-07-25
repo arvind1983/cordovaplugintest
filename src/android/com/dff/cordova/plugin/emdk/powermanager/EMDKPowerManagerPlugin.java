@@ -502,6 +502,13 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
             return true;
             
         }
+        
+        if(action.equals("WalkMeTrigger"))
+        {
+            ABBI.trigger(args.getString(0));
+            return true;
+            
+        }
 
         return super.execute(action, args, callbackContext);
     }

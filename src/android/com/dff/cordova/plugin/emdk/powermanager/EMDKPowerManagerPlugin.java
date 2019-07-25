@@ -523,6 +523,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         if(action.equals("RestartWalkMe"))
         {
             ABBI.restart();
+            callbackContext.success("true");
             return true;
             
         }

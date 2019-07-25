@@ -498,7 +498,7 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         
         if(action.equals("StartWalkMe"))
         {
-            ABBI.start("22a08476-9c2b-4d09-84a6-837d3c162eaf", "NWZKcG5pa2hCK2YzWlRWTlBSczZiQzhIRk4yelpkcW9NRit6OXkvTHdFSktZQVVzMkkyQ0JkdHMzVmZ5WDV0YmZ4", ABBIFlags.ABBI_APP_HYBRID, this.cordova.getActivity().getApplication());
+            ABBI.start(args.getString(0), args.getString(1), ABBIFlags.ABBI_APP_HYBRID, this.cordova.getActivity().getApplication());
             return true;
             
         }
@@ -513,6 +513,13 @@ public class EMDKPowerManagerPlugin extends CommonPlugin implements EMDKListener
         if(action.equals("StopWalkMe"))
         {
             ABBI.stop();
+            return true;
+            
+        }
+        
+        if(action.equals("RestartWalkMe"))
+        {
+            ABBI.restart();
             return true;
             
         }
